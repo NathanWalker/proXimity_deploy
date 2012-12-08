@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>ProXimity by Saexa</title>
+<meta name="author" content="ProXimity">
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/051c0509.main.css"/>
+<style>
+[ng-cloak] {
+  display:none;
+}
+</style>
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="./favicon.ico">
+<!-- TODO: replace these! -->
+<!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png">-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png">-->
+<!--<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png">-->
+<!--<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png">-->
+
+</head>
+<body ng-app="ProximityApp" ng-controller="SiteCtrl">
+
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+  today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+  experience this site.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="scripts/vendor/61e2728c.es5-shim.min.js"></script>
+<script src="scripts/vendor/241d7c33.json3.min.js"></script>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<!-- NAVBAR
+    ================================================== -->
+<!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+<div class="container navbar-wrapper" ng-cloak ng-class="{showovercontent:carouselActive()}">
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+      <a class="btn btn-navbar" ng-click="toggleMenu()">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" ng-click="changeRoute('/')">pro<span>X</span>imity</a>
+      <img src="/images/9267a09c.logo.png" alt="proXimity" class="logo"/>
+      <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+      <div class="nav-collapse collapse" prox-menu>
+        <ul class="nav" style="float:right; text-align:right;">
+          <li ng-repeat="nav in headerLinks" ng-class="{active:nav.active}"><a ng-click="changeRoute(nav.link)">{{nav.label}}</a>
+          </li>
+          <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+          <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+          <!--<ul class="dropdown-menu">-->
+          <!--<li><a href="#">Action</a></li>-->
+          <!--<li><a href="#">Another action</a></li>-->
+          <!--<li><a href="#">Something else here</a></li>-->
+          <!--<li class="divider"></li>-->
+          <!--<li class="nav-header">Nav header</li>-->
+          <!--<li><a href="#">Separated link</a></li>-->
+          <!--<li><a href="#">One more separated link</a></li>-->
+          <!--</ul>-->
+          <!--</li>-->
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!-- /.navbar-inner -->
+  </div>
+  <!-- /.navbar -->
+
+</div>
+<!-- /.container -->
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" ng-show="carouselActive()">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="../assets/img/examples/slide-01.jpg" alt="">
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Exposure</h1>
+
+          <p class="lead">Information can be connected to reveal too much personal information.</p>
+          <a class="btn btn-large btn-primary" ng-click="showMsg('Coming soon!')">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../assets/img/examples/slide-02.jpg" alt="">
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Criminal Exposure</h1>
+
+          <p class="lead">This is all Rich. Fill this in.</p>
+          <a class="btn btn-large btn-primary" ng-click="showMsg('Coming soon!')">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../assets/img/examples/slide-03.jpg" alt="">
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Social Exposure</h1>
+
+          <p class="lead">This is all Rich. Fill this in.</p>
+          <a class="btn btn-large btn-primary" ng-click="showMsg('Coming soon!')">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../assets/img/examples/slide-02.jpg" alt="">
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Professional Exposure</h1>
+
+          <p class="lead">This is all Rich. Fill this in.</p>
+          <a class="btn btn-large btn-primary" ng-click="showMsg('Coming soon!')">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+<!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing" ng-class="{'content-page':!carouselActive()}">
+
+  <div ng-view></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="pull-right"><a href="javascript:void(0)" class="scrollToTop">Scroll To Top</a></p>
+
+    <p>&copy; 2012 ProXimity, Inc. &middot; <a ng-click="changeRoute('/privacy')">Privacy</a> &middot; <a ng-click="changeRoute('/terms')">Terms</a></p>
+  </footer>
+</div>
+
+<script src="scripts/99d5ee7d.scripts.js"></script>
+
+<script>
+  !function($){
+    $(document).ready(function(){
+      // carousel demo
+      setTimeout(function(){
+        $('#myCarousel').carousel();
+      }, 1000);
+
+      //Check to see if the window is top if not then display button
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 100){
+          $('.scrollToTop').fadeIn();
+        } else {
+          $('.scrollToTop').fadeOut();
+        }
+      });
+      //Click event to scroll to top
+      $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop: 0}, 500);
+        return false;
+      });
+    });
+  }(window.jQuery)
+</script>
+<script>
+  var _gaq = [
+    ['_setAccount', 'UA-36722840-1'],
+    ['_trackPageview']
+  ];
+  (function(d, t){
+    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s)
+  }(document, 'script'));
+</script>
+
+</body>
+</html>

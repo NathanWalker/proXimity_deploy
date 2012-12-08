@@ -1,0 +1,78 @@
+<!-- Three columns of text below the carousel -->
+<div class="row">
+  <div class="span4">
+    <img class="img-circle" src="http://placehold.it/140x140">
+
+    <h2>Take Control</h2>
+
+    <p>This is all Rich. Go for it! Expand this approach and that approach to come to the ultimate conclusion on how awesome ProXimity is.</p>
+
+    <p><a class="btn" ng-click="showMsg('Coming soon!')">View details &raquo;</a></p>
+  </div>
+  <!-- /.span4 -->
+  <div class="span4">
+    <img class="img-circle" src="http://placehold.it/140x140">
+
+    <h2>Secure Privacy</h2>
+
+    <p>This is all Rich. Go for it! Another expansion into how ProXimity can help you. And where they should go to find out how to buy it.</p>
+
+    <p><a class="btn" ng-click="showMsg('Coming soon!')">View details &raquo;</a></p>
+  </div>
+  <!-- /.span4 -->
+  <div class="span4">
+    <!--<img class="img-circle" src="http://placehold.it/140x140">-->
+
+    <h2>@pXimity</h2>
+
+    <ul class="unstyled twitter-feed">
+      <li ng-repeat="item in twitterFeed | limitTo:3"><strong>{{item.from_user_name}}</strong> <span
+        ng-bind-html="item.text | linky"></span></li>
+    </ul>
+
+    <p><a class="btn" href="https://twitter.com/search?q=comedy" target="_blank">View more &raquo;</a></p>
+  </div>
+  <!-- /.span4 -->
+</div>
+<!-- /.row -->
+
+
+<!-- START THE FEATURETTES -->
+
+<hr class="featurette-divider">
+
+<div class="featurette">
+  <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
+
+  <h2 class="featurette-heading">First featurette heading. <span class="muted">It'll blow your mind.</span></h2>
+
+  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
+    Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="featurette">
+  <img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
+
+  <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+
+  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
+    Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="featurette">
+  <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
+
+  <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+
+  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
+    Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+</div>
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURETTES -->
+
