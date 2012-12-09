@@ -56,11 +56,5 @@ app.configure('development', function(){
 });
 
 app.configure('production', function(){
-  childProcess.exec('compass compile --force -s compressed', function(error, stdout, stderr){
-    console.log('\n\n**************************************\nCOMPASS GENERATION :\n\n--stdout :\n\n' + stdout);
-    if (error !== null){
-      console.log('exec error: ' + error);
-    }
-  });
   app.use(express.errorHandler());
 });
