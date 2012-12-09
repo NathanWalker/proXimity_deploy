@@ -2,6 +2,11 @@
   "author": "Nathan Walker",
   "name": "ProXimity",
   "version": "0.0.1",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "express":"3.0.0",
+    "node-compass":"0.0.2"
+  },
+  "devDependencies": {
+    "ejs":"*"
+  }
 }

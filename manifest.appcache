@@ -21,18 +21,10 @@ CACHE MANIFEST
 #  configFile: /usr/local/lib/node_modules/yeoman/lib/support/confess.json
 
 CACHE:
-../assets/img/examples/browser-icon-chrome.png
-../assets/img/examples/browser-icon-firefox.png
-../assets/img/examples/browser-icon-safari.png
-../assets/img/examples/slide-01.jpg
-../assets/img/examples/slide-02.jpg
-../assets/img/examples/slide-03.jpg
-/images/9267a09c.logo.png
-http://placehold.it/140x140
-http://search.twitter.com/search.json?callback=angular.callbacks._0&q=comedy
+/images/logo.png
 http://www.google-analytics.com/ga.js
 scripts/99d5ee7d.scripts.js
-styles/051c0509.main.css
+stylesheet/main.css
 
 NETWORK:
 *
