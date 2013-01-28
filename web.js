@@ -1,5 +1,5 @@
 var express = require('express'), routes = require('./routes'), childProcess = require('child_process'),
-  compass = require('node-compass'), path = require('path');
+  path = require('path');
 
 var app = module.exports = express();
 
@@ -20,11 +20,11 @@ app.set('view engine', 'html');
 app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.static(path.join(__dirname, 'scripts')));
+  app.use(express.static(path.join(__dirname, 'js')));
+  app.use(express.static(path.join(__dirname, 'css')));
+  app.use(express.static(path.join(__dirname, 'img')));
+  app.use(express.static(path.join(__dirname, 'views')));
   app.use(express.static(__dirname));
-  app.use(compass({
-    project: path.join(__dirname, 'styles')
-  }));
 });
 
 app.get('*', routes.index);
@@ -39,12 +39,6 @@ startTime = startTime.toString();
 console.log("\n------------------------------\nMODE : %s \nPORT : %d\nStartTime : %s \n------------------------------", app.settings.env, port, startTime);
 
 app.configure('development', function(){
-  childProcess.exec('compass compile --force -s nested --no-line-comments', function(error, stdout, stderr){
-    console.log('\n\n**************************************\nCOMPASS GENERATION :\n\n--stdout :\n\n' + stdout);
-    if (error !== null){
-      console.log('exec error: ' + error);
-    }
-  });
 
   app.use(express.errorHandler({
     dumpExceptions: true,

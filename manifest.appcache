@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Sun Jan 27 2013 10:15:49 GMT-0800 (PST)
+# Time: Sun Jan 27 2013 21:21:17 GMT-0800 (PST)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -22,6 +22,9 @@ CACHE MANIFEST
 
 CACHE:
 /css/24153a11.style.css
+/img/browser-icon-chrome.png
+/img/browser-icon-firefox.png
+/img/browser-icon-safari.png
 /img/logo.png
 /img/one-finger-swipe.png
 /img/slide-01.jpg
@@ -29,8 +32,10 @@ CACHE:
 /img/slide-03.jpg
 /img/glyphicons-halflings-white.png
 /img/glyphicons-halflings.png
+http://placehold.it/140x140
+http://search.twitter.com/search.json?callback=angular.callbacks._0&q=comedy
 http://www.google-analytics.com/ga.js
-/js/b769ce7a.script.js
+/js/feadf0ed.script.js
 
 NETWORK:
 *
